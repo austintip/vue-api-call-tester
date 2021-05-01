@@ -5,6 +5,7 @@ const app = new Vue({
     data: {
 
         result: ' ',
+        imageLink: ' ',
         responseAvailable: false,
         randomNum: 0
     },
@@ -27,7 +28,8 @@ const app = new Vue({
                     }
                 })
                 .then(response => {
-                    this.result = response.name;
+                    this.result = response.name.toUpperCase()
+                    this.imageLink = response.sprites.front_default;
                     this.responseAvailable = true;
                 })
                 .catch(err => {
