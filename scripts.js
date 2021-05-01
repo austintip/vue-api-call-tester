@@ -17,8 +17,6 @@ const app = new Vue({
             this.randomNum = Math.floor(Math.random() * 893)
             fetch(`https://pokeapi.co/api/v2/pokemon/${this.randomNum}`, {
                 "method": "GET",
-                // "headers": {
-                // }
             })
                 .then(response => {
                     if (response.ok) {
