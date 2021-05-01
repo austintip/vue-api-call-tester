@@ -6,15 +6,15 @@ const app = new Vue({
 
         result: ' ',
         responseAvailable: false,
-        // apiKey: "40e78f03dbmsh73ad89779995765p1cfe84jsn495944b9cff8"
-
+        randomNum: 0
     },
 
     methods: {
 
         fetchAPIData() {
             this.responseAvailable = false;
-            fetch("https://pokeapi.co/api/v2/pokemon/1", {
+            this.randomNum = Math.floor(Math.random() * 151)
+            fetch(`https://pokeapi.co/api/v2/pokemon/${this.randomNum}`, {
                 "method": "GET",
                 // "headers": {
                 // }
