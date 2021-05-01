@@ -13,11 +13,12 @@
     <div id="main">
         <h1> Vue.JS API Call Example</h1>
         <button type="button" id="get-pokemon" @click="fetchAPIData">Get a Pokemon!!</button>
-        <div v-if="responseAvailable == true">
+        <div class="pokemon-box" v-if="responseAvailable == true">
             <hr>
             <p>
-                <i id="pokemon-name">{{ result }}</i>
+                <i class="pokemon-name">{{ result }}</i>
                 <br/>
+                <p class="info">It is a(n) {{ type }} type Pokémon!</p>
                 <p class="info">An image of it can be found at {{ imageLink }}</p>
             </p>
             <hr>
