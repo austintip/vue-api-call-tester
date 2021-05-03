@@ -11,15 +11,17 @@
 </head>
 <body>
     <div id="main">
-        <h1> Vue.JS API Call Example</h1>
+        <h1 class="page-header"> Vue.JS API Call Example</h1>
         <button type="button" id="get-pokemon" @click="fetchAPIData">Get a Pokemon!!</button>
         <div class="pokemon-box" v-if="responseAvailable == true">
             <hr>
             <p>
+                <img class="pokemon-image" :src="image">
+                <br />
                 <i class="pokemon-name">{{ result }}</i>
                 <br/>
-                <p class="info">It is a(n) {{ type }} type Pokémon!</p>
-                <p class="info">An image of it can be found at {{ imageLink }}</p>
+                <p class="info">The {{ type }}-type Pokémon!</p>
+                
             </p>
             <hr>
     </div>
